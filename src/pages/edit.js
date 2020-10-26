@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { ButtonGroup, Button } from "@material-ui/core"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import CustomCard from "../components/CustomCard"
 
 import Amplify from "aws-amplify"
