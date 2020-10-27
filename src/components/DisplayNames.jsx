@@ -41,8 +41,13 @@ const DisplayNames = () => {
   const [roses, setRoses] = useState([]);
   useEffect(() => {
     const getRoses = async () => {
-      const result = await API.graphql(graphqlOperation(listRoses));
-      setRoses(result.data.listRoses.items);
+        // Switch authMode to API_KEY for public access
+        const { data } = await API.graphql({
+            query: listRoses,
+            authMode: "API_KEY"
+          });
+    //   const result = await API.graphql(graphqlOperation(listRoses));
+      setRoses(data.listRoses.items);
     };
 
     getRoses();
