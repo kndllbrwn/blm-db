@@ -13,6 +13,7 @@ type Rose
   id: ID!
   name: String!
   updatedBy: String!
+  updateTime: String!
   imageUrl: String
   age: String
   location: String
@@ -21,7 +22,7 @@ type Rose
   year: String!
   city: String
   state: String!
-  article1: String!
-  article2: String
-  article3: String
+  source1: String!
+  source2: String
+  source3: String
 }

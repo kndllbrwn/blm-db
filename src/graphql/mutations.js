@@ -10,6 +10,7 @@ export const createRose = /* GraphQL */ `
       id
       name
       updatedBy
+      updateTime
       imageUrl
       age
       location
@@ -18,9 +19,9 @@ export const createRose = /* GraphQL */ `
       year
       city
       state
-      article1
-      article2
-      article3
+      source1
+      source2
+      source3
     }
   }
 `;
@@ -33,6 +34,7 @@ export const updateRose = /* GraphQL */ `
       id
       name
       updatedBy
+      updateTime
       imageUrl
       age
       location
@@ -41,9 +43,9 @@ export const updateRose = /* GraphQL */ `
       year
       city
       state
-      article1
-      article2
-      article3
+      source1
+      source2
+      source3
     }
   }
 `;
@@ -56,6 +58,7 @@ export const deleteRose = /* GraphQL */ `
       id
       name
       updatedBy
+      updateTime
       imageUrl
       age
       location
@@ -64,9 +67,9 @@ export const deleteRose = /* GraphQL */ `
       year
       city
       state
-      article1
-      article2
-      article3
+      source1
+      source2
+      source3
     }
   }
 `;

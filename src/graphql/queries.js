@@ -7,6 +7,7 @@ export const getRose = /* GraphQL */ `
       id
       name
       updatedBy
+      updateTime
       imageUrl
       age
       location
@@ -15,9 +16,9 @@ export const getRose = /* GraphQL */ `
       year
       city
       state
-      article1
-      article2
-      article3
+      source1
+      source2
+      source3
     }
   }
 `;
@@ -32,6 +33,7 @@ export const listRoses = /* GraphQL */ `
         id
         name
         updatedBy
+        updateTime
         imageUrl
         age
         location
@@ -40,9 +42,9 @@ export const listRoses = /* GraphQL */ `
         year
         city
         state
-        article1
-        article2
-        article3
+        source1
+        source2
+        source3
       }
       nextToken
     }

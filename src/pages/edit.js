@@ -30,7 +30,7 @@ const Edit = () => {
             alignItems: "center",
           }}
         >
-          <h1>Names</h1>
+          <h1 style={{textAlign: "center"}}>Edit Names</h1>
           <AmplifySignOut />
         </div>
         <ButtonGroup
@@ -48,9 +48,7 @@ const Edit = () => {
         {names &&
           names.map(rose => {
             return (
-              <>
                 <CustomCard rose={rose} />
-              </>
             )
           })}
       </AmplifyAuthenticator>

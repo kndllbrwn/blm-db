@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import {
   Card,
   CardMedia,
@@ -9,7 +9,7 @@ import {
 // import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles"
 import { createRose } from "../graphql/mutations"
-import { API, graphqlOperation } from "aws-amplify"
+import { Auth, API, graphqlOperation } from "aws-amplify"
 import moment from "moment"
 
 const useStyles = makeStyles({
@@ -25,8 +25,11 @@ const CustomCard = props => {
   // const { name, city, state, month, year, date, blurb } = props;
   const [cardState, setCardState] = useState({
     ...props.rose,
-    imgSrc:
+    imageUrl:
       "https://www.healthylifestylesliving.com/wp-content/uploads/2015/12/placeholder-256x256.gif",
+      currentUser: "",
+      currentUserId: "",
+      updateTime: new Date().toISOString(),
   })
   const [editing, setEditing] = useState(false)
   const onTextChange = e => {
@@ -37,17 +40,31 @@ const CustomCard = props => {
     setEditing(!editing)
   }
 
-  const updateDB = async ({ name, city, state, age, month, year }) => {
+  useEffect(() => {
+    const getUser = async () => {
+      await Auth.currentUserInfo().then((user) => {
+        setCardState({ ...cardState,
+          currentUser: user.username, })
+        console.log(user)
+      });
+    };
+
+    getUser();
+  }, []);
+
+  const updateDB = async ({ name, city, state, age, month, year,currentUser, imageUrl }) => {
     const input = {
       name,
-      updatedBy: "KB",
+      updatedBy: currentUser,
       age,
+      imageUrl,
       event: "n/a",
       month,
       year,
       city,
       state,
-      article1: "n/a",
+      source1: "n/a",
+      updateTime: new Date().toISOString(),
     }
     debugger
     console.log("clicked", name)
@@ -58,7 +75,7 @@ const CustomCard = props => {
     <>
       <Card key={cardState.id} className={classes.root}>
         <CardMedia
-          image={cardState.imgSrc}
+          image={cardState.imageUrl}
           className={classes.root}
           style={{ width: "150px", height: "150px" }}
         />
@@ -72,8 +89,8 @@ const CustomCard = props => {
             />
             <input
               type="text"
-              name="imgSrc"
-              value={cardState.imgSrc}
+              name="imageUrl"
+              value={cardState.imageUrl}
               onChange={e => onTextChange(e)}
             />
             <input

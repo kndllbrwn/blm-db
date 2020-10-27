@@ -131,6 +131,21 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
+          "name" : "updateTime",
+          "description" : null,
+          "args" : [ ],
+          "type" : {
+            "kind" : "NON_NULL",
+            "name" : null,
+            "ofType" : {
+              "kind" : "SCALAR",
+              "name" : "String",
+              "ofType" : null
+            }
+          },
+          "isDeprecated" : false,
+          "deprecationReason" : null
+        }, {
           "name" : "imageUrl",
           "description" : null,
           "args" : [ ],
@@ -231,7 +246,7 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "article1",
+          "name" : "source1",
           "description" : null,
           "args" : [ ],
           "type" : {
@@ -246,7 +261,7 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "article2",
+          "name" : "source2",
           "description" : null,
           "args" : [ ],
           "type" : {
@@ -257,7 +272,7 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "article3",
+          "name" : "source3",
           "description" : null,
           "args" : [ ],
           "type" : {
@@ -358,6 +373,15 @@
           },
           "defaultValue" : null
         }, {
+          "name" : "updateTime",
+          "description" : null,
+          "type" : {
+            "kind" : "INPUT_OBJECT",
+            "name" : "ModelStringInput",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
           "name" : "imageUrl",
           "description" : null,
           "type" : {
@@ -430,7 +454,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article1",
+          "name" : "source1",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -439,7 +463,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article2",
+          "name" : "source2",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -448,7 +472,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article3",
+          "name" : "source3",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1057,6 +1081,19 @@
           },
           "defaultValue" : null
         }, {
+          "name" : "updateTime",
+          "description" : null,
+          "type" : {
+            "kind" : "NON_NULL",
+            "name" : null,
+            "ofType" : {
+              "kind" : "SCALAR",
+              "name" : "String",
+              "ofType" : null
+            }
+          },
+          "defaultValue" : null
+        }, {
           "name" : "imageUrl",
           "description" : null,
           "type" : {
@@ -1141,7 +1178,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article1",
+          "name" : "source1",
           "description" : null,
           "type" : {
             "kind" : "NON_NULL",
@@ -1154,7 +1191,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article2",
+          "name" : "source2",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -1163,7 +1200,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article3",
+          "name" : "source3",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -1199,6 +1236,15 @@
           },
           "defaultValue" : null
         }, {
+          "name" : "updateTime",
+          "description" : null,
+          "type" : {
+            "kind" : "INPUT_OBJECT",
+            "name" : "ModelStringInput",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
           "name" : "imageUrl",
           "description" : null,
           "type" : {
@@ -1271,7 +1317,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article1",
+          "name" : "source1",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1280,7 +1326,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article2",
+          "name" : "source2",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1289,7 +1335,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article3",
+          "name" : "source3",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1373,6 +1419,15 @@
           },
           "defaultValue" : null
         }, {
+          "name" : "updateTime",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "String",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
           "name" : "imageUrl",
           "description" : null,
           "type" : {
@@ -1445,7 +1500,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article1",
+          "name" : "source1",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -1454,7 +1509,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article2",
+          "name" : "source2",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -1463,7 +1518,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "article3",
+          "name" : "source3",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -1533,6 +1588,51 @@
         } ],
         "inputFields" : null,
         "interfaces" : [ ],
+        "enumValues" : null,
+        "possibleTypes" : null
+      }, {
+        "kind" : "INPUT_OBJECT",
+        "name" : "ModelBooleanInput",
+        "description" : null,
+        "fields" : null,
+        "inputFields" : [ {
+          "name" : "ne",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Boolean",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "eq",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Boolean",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "attributeExists",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Boolean",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "attributeType",
+          "description" : null,
+          "type" : {
+            "kind" : "ENUM",
+            "name" : "ModelAttributeTypes",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        } ],
+        "interfaces" : null,
         "enumValues" : null,
         "possibleTypes" : null
       }, {
@@ -1654,51 +1754,6 @@
         "description" : "Built-in Float",
         "fields" : null,
         "inputFields" : null,
-        "interfaces" : null,
-        "enumValues" : null,
-        "possibleTypes" : null
-      }, {
-        "kind" : "INPUT_OBJECT",
-        "name" : "ModelBooleanInput",
-        "description" : null,
-        "fields" : null,
-        "inputFields" : [ {
-          "name" : "ne",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Boolean",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "eq",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Boolean",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "attributeExists",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Boolean",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "attributeType",
-          "description" : null,
-          "type" : {
-            "kind" : "ENUM",
-            "name" : "ModelAttributeTypes",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        } ],
         "interfaces" : null,
         "enumValues" : null,
         "possibleTypes" : null
@@ -2580,23 +2635,6 @@
         "onFragment" : false,
         "onField" : true
       }, {
-        "name" : "deprecated",
-        "description" : null,
-        "locations" : [ "FIELD_DEFINITION", "ENUM_VALUE" ],
-        "args" : [ {
-          "name" : "reason",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "String",
-            "ofType" : null
-          },
-          "defaultValue" : "\"No longer supported\""
-        } ],
-        "onOperation" : false,
-        "onFragment" : false,
-        "onField" : false
-      }, {
         "name" : "aws_api_key",
         "description" : "Tells the service this field/object has access authorized by an API key.",
         "locations" : [ "OBJECT", "FIELD_DEFINITION" ],
@@ -2659,6 +2697,23 @@
         "description" : "Tells the service this field/object has access authorized by an OIDC token.",
         "locations" : [ "OBJECT", "FIELD_DEFINITION" ],
         "args" : [ ],
+        "onOperation" : false,
+        "onFragment" : false,
+        "onField" : false
+      }, {
+        "name" : "deprecated",
+        "description" : null,
+        "locations" : [ "FIELD_DEFINITION", "ENUM_VALUE" ],
+        "args" : [ {
+          "name" : "reason",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "String",
+            "ofType" : null
+          },
+          "defaultValue" : "\"No longer supported\""
+        } ],
         "onOperation" : false,
         "onFragment" : false,
         "onField" : false
