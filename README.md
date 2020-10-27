@@ -9,3 +9,5 @@ In order to begin:
 2. Run `yarn start` and `yarn run db` commands to bring up the local application and source database.
 3. After beginning the application navigate to the Edit Page and create a username in order to gain access to records.
 4. Contact me for admin access in order to gain access to the GraphQL API.
+
+A working baseline for the application has been established, but there are opportunities available for contributors of all skill levels even those without coding knowledge!
