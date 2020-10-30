@@ -43,9 +43,13 @@ const CustomCard = props => {
   useEffect(() => {
     const getUser = async () => {
       await Auth.currentUserInfo().then((user) => {
-        setCardState({ ...cardState,
-          currentUser: user.username, })
-        console.log(user)
+        try {
+          setCardState({ ...cardState,
+            currentUser: user.username, })
+        } catch(e){
+          console.log(e)
+        }
+        // console.log(user)
       });
     };
 

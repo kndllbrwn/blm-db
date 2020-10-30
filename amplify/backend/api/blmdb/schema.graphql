@@ -2,7 +2,7 @@ type Rose
   @model
   @auth(
     rules: [
-      # allow admins to create, update and delete books
+      # allow admins to create, update and delete roses
       { allow: groups, groups: ["Admin"] }
       # allow all authenticated users to read posts
       { allow: private, operations: [read] }
