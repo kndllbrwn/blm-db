@@ -3,7 +3,6 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
 module.exports = {
     plugins: [
         {
@@ -14,9 +13,9 @@ module.exports = {
                 // This is the field under which it's accessible
                 fieldName: "Rose",
                 // URL to query from
-                url: `${process.env.AWS_APPSYNC_API_URL}`,
+                url: "https://2apnrm7ymreqfkjznhzs45nxu4.appsync-api.us-east-1.amazonaws.com/graphql",
                 headers: {
-                    "x-api-key": `${process.env.AWS_APPSYNC_API_KEY}`
+                    "x-api-key": "da2-kk5hi7xxpfcfrfiki4lddfroni"
                 },
                 refetchInterval: 10,
             },
